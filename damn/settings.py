@@ -8,9 +8,7 @@ SESSION_CONFIGS = [
         app_sequence=['PureEOQ','EOQ','PureNewsvendor', 'BuybackNewsvendor'],
         num_demo_participants=4,
     ),
-    dict(
-        name='survey', app_sequence=['survey', 'payment_info'], num_demo_participants=1
-    ),
+
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs

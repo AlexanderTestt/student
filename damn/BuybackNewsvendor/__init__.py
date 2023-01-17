@@ -142,7 +142,9 @@ class Results(Page):
                     PFSC=int(ProfitB)+int(ProfitS)
                     )
 
-
+class Thanks(Page):
+    def is_displayed(player: Player):
+        return player.round_number == C.NUM_ROUNDS
 
 page_sequence = [
     Introduction,
@@ -151,4 +153,5 @@ page_sequence = [
     SendBack,
     ResultsWaitPage,
     Results,
+    Thanks
 ]
