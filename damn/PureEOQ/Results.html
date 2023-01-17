@@ -1,0 +1,24 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+
+<br>
+Your order size was: {{player.quantity}}.
+<br>
+
+With that order size your total costs were:  {{TC}}.
+<br>
+Good job! Your profit this year was: <strong>{{ player.profit }}</strong>.
+<br>
+
+The optimal order size would have been: {{optimal}}.
+
+<br>
+
+
+
+
+ <p>{{ next_button }}</p>
+
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}
