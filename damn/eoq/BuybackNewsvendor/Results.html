@@ -1,0 +1,44 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+The demand realization was : {{Dem}}. <p></p>
+The order was {{group.quantity}}<p></p>
+
+
+The buyer had profits of {{PF}}
+<br>
+The profit for the supplier was {{PFS}} each year.
+<br>
+The supply chain therefore made earnings of {{PFSC}} each year.
+<br>
+
+
+Good job!
+{{ if player.id_in_group == 1 }}
+        <p>
+
+        </p>
+        <p>
+            You were a supplier.
+            Thus your profit was:
+           <strong> {{ player.profit }}</strong>
+        </p>
+
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+
+{{else}}
+<br>
+<br>
+You were a buyer.
+            Thus your profit was:   <strong>{{ player.profit }}</strong>
+
+
+{{endif}}
+ <p>{{ next_button }}</p>
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}

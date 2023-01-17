@@ -1,0 +1,15 @@
+{{ block title }}Your Choice{{ endblock }}
+{{ block content }}
+
+    <p>
+    You are the supplier. Please set the amounts for the price reduction.
+    </p>
+
+    {{ formfields }}
+    <p>
+    {{ next_button }}
+    </p>
+
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}
