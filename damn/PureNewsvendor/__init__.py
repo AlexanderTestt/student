@@ -73,7 +73,9 @@ class order(Page):
 
     form_model = 'player'
     form_fields = ['quantity']
-
+    def error_message(player:Player, values):
+        if values['quantity'] < 1:
+            return 'The number must be higher than 0.'
 
 
 class Results(Page):

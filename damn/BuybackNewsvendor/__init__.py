@@ -6,7 +6,7 @@ class Calcu:
         Rest = Q-D
         if Rest >= 0:
             Revenue = D*P + Rest*(S+BB)
-            Buyback = (BB-S) * Rest
+            Buyback = (BB) * Rest
         else:
             Revenue = Q*P
             Buyback = 0
@@ -15,7 +15,7 @@ class Calcu:
 
         results = {
             "PF": Profit,
-            "PFS":Profits
+            "PFS": Profits
 
         }
         return results
@@ -91,8 +91,8 @@ class Send(Page):
     form_model = 'group'
     form_fields = ['buyback_reduction']
     def error_message(group:Group, values):
-        if values['buyback_reduction'] < 2:
-            return 'The number must be higher than the salvage value, otherwise the buyer will not accept the offer.'
+        if values['buyback_reduction'] < 0:
+            return 'The number must be higher than 0, otherwise the buyer will not accept the offer.'
     @staticmethod
     def is_displayed(player: Player):
         return player.id_in_group == 1
@@ -108,7 +108,9 @@ class SendBack(Page):
 
     form_model = 'group'
     form_fields = ['quantity']
-
+    def error_message(player:Player, values):
+        if values['quantity'] < 1:
+            return 'The number must be higher than 0.'
     @staticmethod
     def is_displayed(player: Player):
         return player.id_in_group == 2

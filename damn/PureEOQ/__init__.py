@@ -80,7 +80,9 @@ class order(Page):
 
     form_model = 'player'
     form_fields = ['quantity']
-
+    def error_message(player:Player, values):
+        if values['quantity'] < 1:
+            return 'The number must be higher than 0.'
     def vars_for_template(player: Player):
         DEMAND = C.DEMAND[player.round_number]
         holding = C.HOLDINGCOST[player.round_number]

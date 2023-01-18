@@ -90,6 +90,7 @@ class Introduction(Page):
         holding = C.HOLDINGCOST[player.round_number]
         return dict(Dem=DEMAND,
                     holding=holding,)
+
 class Send(Page):
     """This page is only for P1
     P1 sends amount (all, some, or none) to P2
@@ -118,7 +119,9 @@ class SendBack(Page):
 
     form_model = 'group'
     form_fields = [ 'quantity']
-
+    def error_message(group:Group, values):
+        if values['quantity'] < 1:
+            return 'The number must be higher than 0.'
     @staticmethod
     def is_displayed(player: Player):
         return player.id_in_group == 2
