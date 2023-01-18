@@ -5,7 +5,7 @@ SESSION_CONFIGS = [
     dict(
         name='Inventory_decisions',
         display_name="Inventory_decisions",
-        app_sequence=[ 'BuybackNewsvendor'],
+        app_sequence=[ 'PureEOQ', 'EOQ', 'PureNewsvendor','BuybackNewsvendor'],
         num_demo_participants=4,
     ),
 
