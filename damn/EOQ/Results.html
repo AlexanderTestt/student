@@ -1,5 +1,7 @@
 {{ block title }}Results{{ endblock }}
 {{ block content }}
+Your chosen order quantity was {{group.quantity}}
+<br> <br>
 The cost for the buyer was {{TC}} each year.
 <br>
 The cost for the supplier was {{TCS}} each year.
@@ -15,8 +17,8 @@ Good job!
         </p>
         <p>
 
-            thus your profit was:
-            {{ player.profit }}
+            As a supplier your profit was:
+            <strong>{{ player.profit }}</strong>
         </p>
 
         <p>
@@ -25,12 +27,11 @@ Good job!
         <p>
 
         </p>
-<strong>{{ player.payoff }}</strong>
+
 {{else}}
 <br>
 <br>
-You were a buyer <br>
-            thus your profit was:  {{ player.profit }}
+As a buyer your profit was: <strong> {{ player.profit }}</strong>
 
 
 {{endif}}

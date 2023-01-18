@@ -90,7 +90,9 @@ class Send(Page):
 
     form_model = 'group'
     form_fields = ['buyback_reduction']
-
+    def error_message(group:Group, values):
+        if values['buyback_reduction'] < 2:
+            return 'The number must be higher than the salvage value, otherwise the buyer will not accept the offer.'
     @staticmethod
     def is_displayed(player: Player):
         return player.id_in_group == 1

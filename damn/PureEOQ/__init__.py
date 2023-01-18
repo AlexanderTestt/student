@@ -27,10 +27,10 @@ class C(BaseConstants):
     MULTIPLIER = 3
     REORDERCOSTB = [200, 220, 380, 160]
     REORDERCOSTS =[300, 300, 300, 300]
-    HOLDINGCOST = [5, 7, 2, 4]
+    HOLDINGCOST = [5, 7, 1, 2]
     DEMAND = [100, 200, 150, 100]
     PROFIT = 10
-    OPTIMALSOLUTION = [10, 112, 239, 89]
+    OPTIMALSOLUTION = [10, 112, 338, 127]
 
 class Subsession(BaseSubsession):
     pass
