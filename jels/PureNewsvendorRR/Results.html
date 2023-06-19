@@ -1,0 +1,25 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+
+
+<br>
+The realized demand was: {{Dem}}.
+<br>
+Your order size was: {{player.quantity}}.
+<br>
+<br>
+Good job! Your profit this year was: <strong>{{ player.profit }}</strong>.
+<br>
+
+
+
+<br>
+
+
+
+
+ <p>{{ next_button }}</p>
+
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}

@@ -1,0 +1,36 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+Cost for buyer {{TC}}
+<br>
+Cost for the supplier {{TCS}}
+<br>
+Cost for the supply chain {{TCSC}}
+<br>
+{{ if player.id_in_group == 1 }}
+        <p>
+
+        </p>
+        <p>
+
+            thus you now have:
+            {{ player.payoff }}
+        </p>
+
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+<strong>{{ player.payoff }}</strong>
+{{else}}
+
+you are a buyer <br>
+            thus you now have:  {{ player.payoff }}
+
+
+{{endif}}
+ <p>{{ next_button }}</p>
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}

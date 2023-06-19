@@ -1,0 +1,13 @@
+{{ block title }}Your Choice{{ endblock }}
+{{ block content }}
+    <p>
+        You are Participant the Buyer. <br>
+        The supplier set a price reduction at an order quantity of {{group.min_quantity}} units.
+        If you order equal or more than that amount you will receive a discount of {{group.price_reduction}} per unit.
+    </p>
+
+    {{ formfields }}
+    <p>{{ next_button }}</p>
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}

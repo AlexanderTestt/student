@@ -1,0 +1,14 @@
+{{ block title }}Your Choice{{ endblock }}
+{{ block content }}
+    <p>
+        As a manager you have to make a decision.<br>
+       You can set the amount of units you want to order for product "A".
+        Please consider, that the demand is stochastic.
+
+    </p>
+
+    {{ formfields }}
+    <p>{{ next_button }}</p>
+    {{ include C.INSTRUCTIONS_TEMPLATE }}
+
+{{ endblock }}
